@@ -40,20 +40,24 @@ class NewEmployee extends Component {
   render() {
     const { fname, lname, email, phone, salary } = this.state;
     return (
-      <div className="form-group">
+      <form>
         <h5>New Employee</h5>
-        <label>First Name</label>
-        <input onChange={this.handleChange} name="fname" value={fname} />
-        <label>Last Name</label>
-        <input onChange={this.handleChange} name="lname" value={lname} />
-        <label>Email</label>
-        <input onChange={this.handleChange} name="email" value={email} />
-        <label>Phone</label>
-        <input onChange={this.handleChange} name="phone" value={phone} />
-        <label>Salary</label>
-        <input onChange={this.handleChange} name="salary" value={salary} />
+        <div className="form-group">
+          <label className="col-sm-1">First Name</label>
+          <input onChange={this.handleChange} name="fname" value={fname} />
+          <label className="col-sm-1">Last Name</label>
+          <input onChange={this.handleChange} name="lname" value={lname} />
+        </div>
+        <div className="form-group">
+          <label className="col-sm-1">Email</label>
+          <input onChange={this.handleChange} name="email"  value={email} />
+          <label className="col-sm-1">Phone</label>
+          <input onChange={this.handleChange} name="phone" value={phone} />
+          <label className="col-sm-1">Salary</label>
+          <input onChange={this.handleChange} name="salary" value={salary} />
+        </div>
         <button onClick={this.handleSubmit}>Submit</button>
-      </div>
+      </form>
     );
   }
 }
