@@ -4,7 +4,10 @@ const massive = require('massive');
 const { json } = require("body-parser");
 
 const app = express()
-const port = 3001
+const port = process.env.port
+if (port == null || port == "") {
+    port = 3001;
+  }
 
 app.use(json());
 

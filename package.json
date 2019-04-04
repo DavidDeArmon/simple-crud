@@ -2,10 +2,10 @@
   "name": "simple-crud",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:3001/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "concurrently": "^4.1.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "massive": "^5.7.7",
@@ -14,7 +14,7 @@
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
